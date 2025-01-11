@@ -1,6 +1,8 @@
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
+
 
 @Configuration
 public class AppConfig {
@@ -10,5 +12,13 @@ public class AppConfig {
         HelloWorld helloWorld = new HelloWorld();
         helloWorld.setMessage("Hello World!");
         return helloWorld;
+    }
+
+    @Bean(name = "catBean")
+    @Scope("prototype")
+    public Cat getName(){
+        Cat cat = new Cat();
+        cat.setCatName("Barsik");
+        return cat;
     }
 }
