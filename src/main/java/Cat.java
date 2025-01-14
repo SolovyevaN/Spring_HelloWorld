@@ -1,7 +1,6 @@
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-@Component ("catBean")
 
 public class Cat {
     public Cat(){
